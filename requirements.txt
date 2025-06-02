@@ -2,6 +2,8 @@ asgiref==3.8.1
 crispy-bootstrap5==2025.4
 Django==4.2.9
 django-crispy-forms==2.4
+django-richtextfield==1.6.2
+djhtml==3.0.8
 pillow==11.2.1
 sqlparse==0.4.4
 tzdata==2024.1
