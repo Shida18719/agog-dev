@@ -17,7 +17,9 @@ Including another URLconf
 from django.contrib import admin
 from django.urls import path, include
 
+# urls for project
 urlpatterns = [
     path('admin/', admin.site.urls),
+    path('djrichtextfield/', include('djrichtextfield.urls')),
     path('', include('portfolio.urls')),
 ]
