@@ -8,6 +8,7 @@ https://docs.djangoproject.com/en/4.2/topics/settings/
 
 For the full list of settings and their values, see
 https://docs.djangoproject.com/en/4.2/ref/settings/
+
 """
 
 import os
@@ -25,11 +26,18 @@ BASE_DIR = Path(__file__).resolve().parent.parent
 
 # SECURITY WARNING: keep the secret key used in production secret!
 SECRET_KEY = os.environ.get('SECRET_KEY')
-
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = 'DEVELOPMENT' in os.environ
 
-ALLOWED_HOSTS = []
+# SEND EMAIL SETTINGS
+EMAIL_HOST = 'smtp.gmail.com'
+EMAIL_HOST_USER = os.environ.get('MY_EMAIL')
+EMAIL_HOST_PASSWORD = os.environ['SEND_EMAIL_PASSWORD'] 
+EMAIL_PORT = 587
+EMAIL_USE_TLS = True
+EMAIL_BACKEND = 'portfolio.backends.email_backend.EmailBackend'
+
+ALLOWED_HOSTS = ['*']
 
 
 # Application definition
@@ -48,7 +56,23 @@ INSTALLED_APPS = [
     # Other
     'crispy_forms',
     'crispy_bootstrap5',
+    'djrichtextfield'
 ]
+
+DJRICHTEXTFIELD_CONFIG = {
+    'js': ['//cdn.ckeditor.com/4.14.1/standard/ckeditor.js'],
+    'init_template': 'djrichtextfield/init/ckeditor.js',
+    'settings': {
+        'toolbar': [
+            ['Format', 'Bold', 'Italic', 'Underline', 'Strike'],
+            ['NumberedList', 'BulletedList'],
+            ['Undo', 'Redo'],
+            ['Maximize', 'ShowBlocks']  
+        ],
+        'format_tags': 'p;h1;h2;h3',
+    }
+}
+        
 
 MIDDLEWARE = [
     'django.middleware.security.SecurityMiddleware',
