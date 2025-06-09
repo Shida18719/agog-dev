@@ -39,9 +39,9 @@ document.addEventListener('DOMContentLoaded', function() {
 // Message Alert
 document.addEventListener("DOMContentLoaded", function() {
 
-  // Dismisses messages alert after 5 seconds
+  // Dismisses messages alert after 10 seconds
 
-    $('.alert').delay(5000).fadeOut(1000);
+    $('.alert').delay(10000).fadeOut(1000);
 });
 
 
