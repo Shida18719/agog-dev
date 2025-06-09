@@ -95,7 +95,7 @@ h1, h2, h3, h4, h5, h6 {
 
 /* Navigation  */
 
-.navbar {
+/* .navbar {
 background-color: rgba(169, 167, 167, 0.6);
 -webkit-backdrop-filter: blur(8px);
 backdrop-filter: blur(8px);
@@ -104,10 +104,10 @@ top: 0;
 left: 0;
 
 width: 100%;
-z-index: 50;
+z-index: 10;
  box-shadow: 0 2px 8px rgba(0,0,0,0.05); 
 border-bottom: 1px solid rgba(0,0,0,0.05); 
-} 
+}  */
 
 .navbar-brand {
     margin-left: 1rem;
