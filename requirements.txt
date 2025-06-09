@@ -1,11 +1,17 @@
 asgiref==3.8.1
+Brotli==1.1.0
+click==8.2.1
+colorama==0.4.6
 crispy-bootstrap5==2025.4
 Django==4.2.9
 django-crispy-forms==2.4
 django-richtextfield==1.6.2
 djhtml==3.0.8
 gunicorn==23.0.0
+h11==0.16.0
 packaging==25.0
 pillow==11.2.1
 sqlparse==0.4.4
 tzdata==2024.1
+uvicorn==0.34.3
+whitenoise==6.9.0
