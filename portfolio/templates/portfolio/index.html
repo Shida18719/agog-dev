@@ -16,7 +16,7 @@
 
                             <div class="col-12 col-lg-3 col-md-6 text-center mb-4 mb-lg-0">
                                 <div class="hero-image-wrapper">
-                                    <img src="{% static data.picture.url  %}" alt="{{ data.name }} Image" class="img-fluid project-img rounded-circle">
+                                    <img src="{{ data.picture.url }}" alt="{{ data.name }} Image" class="img-fluid project-img rounded-circle">
                                 </div>
                             </div>
                             <!-- Hero Text Content -->
@@ -76,7 +76,7 @@
                         <a href="{% url 'about' %}" class="btn btn-light btn-lg btn-about-me px-2 py-2 me-sm-2" aria-label="Go To About Page">Learn More About Me</a>
                     </div>
                 </div
-            {% endfor %}
+        {% endfor %}
         </div>
     </div>
             </div>

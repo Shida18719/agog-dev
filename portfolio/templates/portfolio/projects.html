@@ -20,7 +20,7 @@
             <div class="col">
                 <div class="card h-100">
                     {% if project.Project_image %}
-                        <img src="{% static project.Project_image.url  %}" alt="{{ project.name }} Image" class="img-fluid project-img" style="width: auto; height: auto;">
+                        <img src="{{ project.Project_image.url }}" alt="{{ project.name }} Image" class="img-fluid project-img" style="width: auto; height: auto;">
                     {% else %}
                         <img src="{% static 'images/default-project.png' %}" alt="Default Project Image" class="img-fluid" style="width: auto; height: auto;">
                     {% endif %}
