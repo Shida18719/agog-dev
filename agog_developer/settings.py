@@ -12,8 +12,11 @@ https://docs.djangoproject.com/en/4.2/ref/settings/
 """
 
 import os
+import dj_database_url
+
 from pathlib import Path
 from django.contrib.messages import constants as messages
+
 
 if os.path.isfile('env.py'):
     import env
@@ -53,11 +56,15 @@ INSTALLED_APPS = [
     
     # Apps
     'portfolio',
+   
     
     # Other
     'crispy_forms',
     'crispy_bootstrap5',
+    'cloudinary',
+    'cloudinary_storage',
     'djrichtextfield'
+    
 ]
 
 MESSAGE_TAGS = {
@@ -126,12 +133,19 @@ WSGI_APPLICATION = 'agog_developer.wsgi.application'
 # Database
 # https://docs.djangoproject.com/en/4.2/ref/settings/#databases
 
-DATABASES = {
-    'default': {
-        'ENGINE': 'django.db.backends.sqlite3',
-        'NAME': BASE_DIR / 'db.sqlite3',
+if DEBUG:
+    DATABASES = {
+        'default': {
+            'ENGINE': 'django.db.backends.sqlite3',
+            'NAME': BASE_DIR / 'db.sqlite3',
+        }
+        
     }
-}
+else:
+
+    DATABASES = {
+        'default': dj_database_url.parse(os.environ.get('DATABASE_URL'))
+    }
 
 
 # Password validation
@@ -171,6 +185,18 @@ USE_TZ = True
 STATIC_URL = 'static/'
 
 STATICFILES_DIRS = (os.path.join(BASE_DIR, 'static'),)
+
+
+# MEDIA_URL = '/media/'
+
+DEFAULT_FILE_STORAGE = 'cloudinary_storage.storage.MediaCloudinaryStorage'
+
+
+CLOUDINARY_STORAGE = {
+    'CLOUD_NAME' : os.environ.get('CLOUDINARY_CLOUD_NAME'), 
+    'API_KEY' : os.environ.get('CLOUDINARY_API_KEY'),
+    'API_SECRET' : os.environ.get('CLOUDINARY_API_SECRET'),
+}
 
 # Default primary key field type
 # https://docs.djangoproject.com/en/4.2/ref/settings/#default-auto-field
