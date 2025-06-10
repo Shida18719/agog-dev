@@ -7,7 +7,7 @@ cloudinary==1.44.0
 colorama==0.4.6
 crispy-bootstrap5==2025.4
 dj-database-url==3.0.0
-Django==4.2.9
+Django==5.2.3
 django-cloudinary-storage==0.3.0
 django-crispy-forms==2.4
 django-richtextfield==1.6.2
@@ -20,9 +20,9 @@ pillow==11.2.1
 psycopg2-binary==2.9.10
 requests==2.32.4
 six==1.17.0
-sqlparse==0.4.4
+sqlparse==0.5.3
 typing_extensions==4.14.0
-tzdata==2024.1
+tzdata==2025.2
 urllib3==2.4.0
 uvicorn==0.34.3
 whitenoise==6.9.0
