@@ -77,7 +77,7 @@ class Project(models.Model):
     
     @property
     def get_image_url(self):
-        if self.project_image:
+        if self.Project_image:
             return self.Project_image.url
         return '/static/images/default-project.png'
 

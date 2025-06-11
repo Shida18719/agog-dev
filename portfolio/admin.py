@@ -14,7 +14,7 @@ class AboutAdmin(admin.ModelAdmin):
     
 @admin.register(Project)
 class ProjectAdmin(admin.ModelAdmin):
-    list_display = ('name', 'description', 'Project_image', 'link')
+    list_display = ('name', 'description', 'link')
     search_fields = ('name', 'description')
     filter_horizontal = ('tags',)
 
