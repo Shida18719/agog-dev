@@ -11,7 +11,7 @@ class HomePage(models.Model):
     greeting = models.CharField(max_length=500)
     title = models.CharField(max_length=1000)
     description = models.CharField(max_length=3000)
-    picture = CloudinaryField('image', default='placeholder')
+    picture = CloudinaryField('image', blank=True, null=True)
     description_intro2 = models.CharField(max_length=2000, null=False, blank=False)
     
     class Meta:
@@ -67,12 +67,19 @@ class Project(models.Model):
     """
     name = models.CharField(max_length=50)
     description = models.CharField(max_length=500)
-    Project_image = CloudinaryField('image', default='placeholder')
+    Project_image = CloudinaryField('image', blank=True, null=True)
     link = models.CharField(max_length=200)
     tags = models.ManyToManyField('Tag')
     
+    
     def __str__(self):
-        return self.name 
+        return self.name
+    
+    @property
+    def get_image_url(self):
+        if self.project_image:
+            return self.Project_image.url
+        return '/static/images/default-project.png'
 
 
 class Contact(models.Model):
