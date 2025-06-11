@@ -7,6 +7,7 @@ class Migration(migrations.Migration):
 
     dependencies = [
         ('portfolio', '0003_alter_homepage_picture_alter_project_project_image'),
+        ('portfolio', '0007_alter_homepage_description_intro2'),
     ]
 
     operations = [
