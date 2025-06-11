@@ -1,4 +1,5 @@
 from django.db import models
+from cloudinary.models import CloudinaryField
 from PIL import Image
 
 from djrichtextfield.models import RichTextField
@@ -10,7 +11,7 @@ class HomePage(models.Model):
     greeting = models.CharField(max_length=500)
     title = models.CharField(max_length=1000)
     description = models.CharField(max_length=3000)
-    picture = models.ImageField(upload_to='images/')
+    picture = CloudinaryField('image', default='placeholder')
     description_intro2 = models.CharField(max_length=2000, null=False, blank=False)
     
     class Meta:
@@ -66,7 +67,7 @@ class Project(models.Model):
     """
     name = models.CharField(max_length=50)
     description = models.CharField(max_length=500)
-    Project_image = models.ImageField(upload_to='images/')
+    Project_image = CloudinaryField('image', default='placeholder')
     link = models.CharField(max_length=200)
     tags = models.ManyToManyField('Tag')
     
