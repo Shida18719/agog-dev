@@ -156,7 +156,7 @@ footer .navbar-brand {
 /* Hero Background */
 .hero-image-bg {
     aspect-ratio: 3 / 4;
-    background: url(https://res.cloudinary.com/dep46gq6m/image/upload/e_improve,w_300,h_600,c_thumb,g_auto/v1749671543/abstract-bg_nm8upq.jpg);
+    background: url(https://res.cloudinary.com/dep46gq6m/image/upload/v1750094823/abstract_sm_qbz0mg.jpg);
     height: 60vh;
     background-size: cover;
      background-position: center;
@@ -171,7 +171,7 @@ footer .navbar-brand {
 }
 
 .contact-image-bg {
-    background: url(https://res.cloudinary.com/dep46gq6m/image/upload/e_improve,w_300,h_600,c_thumb,g_auto/v1749671543/abstract-bg_nm8upq.jpg);
+    background: url(https://res.cloudinary.com/dep46gq6m/image/upload/v1750094823/abstract_sm_qbz0mg.jpg);
     min-height: 100vh;
     background-size: cover;
     background-position: center;
@@ -213,7 +213,7 @@ footer .navbar-brand {
     width: 100px;
     height: 100px;
     object-fit: cover;
-    margin: 5rem auto 1rem auto;
+    margin: 7rem auto 1rem auto;
     display: flex;
     align-items: center;
     justify-content: center;
@@ -224,6 +224,7 @@ footer .navbar-brand {
   color: var(--projects-btn);
   font-size: 1.3rem;
   margin-left: 4rem;
+  margin-top: 1.2rem;
   text-align: center;
   font-weight: 600;
 
@@ -519,7 +520,7 @@ footer {
     height: 20%;
     object-fit: cover;
     align-items: center;
-    margin-bottom: 1rem; 
+    margin-bottom: 1.5rem; 
     }
 
     .hero-image-bg {
@@ -564,6 +565,36 @@ footer {
 
 
 @media only screen and (min-width : 768px) {
+    .hero-image-bg {
+    aspect-ratio: 3 / 4;
+    background: url(https://res.cloudinary.com/dep46gq6m/image/upload/v1750094839/abstract_md_c16sid.jpg);
+    height: 60vh;
+    background-size: cover;
+     background-position: center;
+    background-repeat: no-repeat;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    position: relative;
+    z-index: 2;
+    
+}
+
+.contact-image-bg {
+    background: url(https://res.cloudinary.com/dep46gq6m/image/upload/v1750094839/abstract_md_c16sid.jpg);
+    min-height: 100vh;
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    object-fit: cover;
+    position: relative;
+    z-index: 2;
+}
     h1 {
         font-size: 3rem;  
     }
@@ -637,7 +668,7 @@ footer {
     .hero-image-bg {
         aspect-ratio: 4 / 3;
         /* background: url(https://res.cloudinary.com/dep46gq6m/image/upload/v1749557690/abstract-bg_rs0jdj.jpg); */
-        background: url(https://res.cloudinary.com/dep46gq6m/image/upload/v1749671543/abstract-bg_nm8upq.jpg);
+        background: url(https://res.cloudinary.com/dep46gq6m/image/upload/v1750094870/abstract_lg2_dopkky.jpg);
         min-height: 70vh;
         background-size: cover;
         background-position: center;
@@ -653,7 +684,7 @@ footer {
     .contact-image-bg {
         aspect-ratio: 4 / 3;
         /* background: url(https://res.cloudinary.com/dep46gq6m/image/upload/v1749557690/abstract-bg_rs0jdj.jpg); */
-        background: url(https://res.cloudinary.com/dep46gq6m/image/upload/v1749671543/abstract-bg_nm8upq.jpg);
+        background: url(https://res.cloudinary.com/dep46gq6m/image/upload/v1750094870/abstract_lg2_dopkky.jpg);
         min-height: 100vh;
         background-size: cover;
         background-position: center;
@@ -677,7 +708,7 @@ footer {
     .hero-image-bg {
         aspect-ratio: 16 / 9;
         /* background: url(https://res.cloudinary.com/dep46gq6m/image/upload/v1749557690/abstract-bg_rs0jdj.jpg); */
-        background: url(https://res.cloudinary.com/dep46gq6m/image/upload/v1749671543/abstract-bg_nm8upq.jpg);
+        background: url(https://res.cloudinary.com/dep46gq6m/image/upload/v1750094898/abstract_lg1_swmrqq.jpg);
         min-height: 80vh;
         background-size: cover;
         background-position: center;
@@ -694,7 +725,7 @@ footer {
     .contact-image-bg {
         aspect-ratio: 16 / 9;
         /* background: url(https://res.cloudinary.com/dep46gq6m/image/upload/v1749557690/abstract-bg_rs0jdj.jpg); */
-        background: url(https://res.cloudinary.com/dep46gq6m/image/upload/v1749671543/abstract-bg_nm8upq.jpg);
+        background: url(https://res.cloudinary.com/dep46gq6m/image/upload/v1750094898/abstract_lg1_swmrqq.jpg);
         min-height: 100vh;
         background-size: cover;
         background-position: center;
