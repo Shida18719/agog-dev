@@ -54,7 +54,6 @@ INSTALLED_APPS = [
     'django.contrib.contenttypes',
     'django.contrib.sessions',
     'django.contrib.messages',
-    'django.contrib.staticfiles',
     
     # Apps
     'portfolio',
@@ -63,9 +62,10 @@ INSTALLED_APPS = [
     # Other
     'crispy_forms',
     'crispy_bootstrap5',
-    'cloudinary',
     'cloudinary_storage',
-    'djrichtextfield'
+    'django.contrib.staticfiles',
+    'cloudinary',
+    'djrichtextfield',
     
 ]
 
