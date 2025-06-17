@@ -683,7 +683,6 @@ footer {
 
     .contact-image-bg {
         aspect-ratio: 4 / 3;
-        /* background: url(https://res.cloudinary.com/dep46gq6m/image/upload/v1749557690/abstract-bg_rs0jdj.jpg); */
         background: url(https://res.cloudinary.com/dep46gq6m/image/upload/v1750094870/abstract_lg2_dopkky.jpg);
         min-height: 100vh;
         background-size: cover;
@@ -707,7 +706,6 @@ footer {
 
     .hero-image-bg {
         aspect-ratio: 16 / 9;
-        /* background: url(https://res.cloudinary.com/dep46gq6m/image/upload/v1749557690/abstract-bg_rs0jdj.jpg); */
         background: url(https://res.cloudinary.com/dep46gq6m/image/upload/v1750094898/abstract_lg1_swmrqq.jpg);
         min-height: 80vh;
         background-size: cover;
@@ -724,7 +722,6 @@ footer {
 
     .contact-image-bg {
         aspect-ratio: 16 / 9;
-        /* background: url(https://res.cloudinary.com/dep46gq6m/image/upload/v1749557690/abstract-bg_rs0jdj.jpg); */
         background: url(https://res.cloudinary.com/dep46gq6m/image/upload/v1750094898/abstract_lg1_swmrqq.jpg);
         min-height: 100vh;
         background-size: cover;
