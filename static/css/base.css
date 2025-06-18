@@ -213,7 +213,7 @@ footer .navbar-brand {
     width: 100px;
     height: 100px;
     object-fit: cover;
-    margin: 7rem auto 1rem auto;
+    margin: 4rem auto 1rem auto;
     display: flex;
     align-items: center;
     justify-content: center;
@@ -283,7 +283,7 @@ footer .navbar-brand {
 
     font-size: 1.2rem;
     margin-top: 0.5rem;
-    margin-bottom: 2rem;
+    margin-bottom: 1.1rem;
     /* text-align: center; */
 }
 
@@ -424,9 +424,13 @@ h2 .about-title{
 }
 
 
-.contact-text,
 .contact-title {
     color: var(--gray);
+}
+
+.contact-text {
+    color: var(--gray);
+    font-size: 1.2rem;
 }
 
 
@@ -500,8 +504,17 @@ footer {
 
 
 /**************** Media Query  **************/
-/* Tablets & ipads*/
+@media only screen and (min-width : 320px) {
+    .page-top {
+        margin-top: 8vh;
+    }
+}
+
 @media only screen and (min-width : 481px) {
+    .page-top {
+        margin-top: 7vh;
+    }
+
     h1 {
         font-size: 3.5rem; 
     }
@@ -538,7 +551,7 @@ footer {
     }
 
     .hero-text {
-        font-size: 1.1rem;
+        font-size: 1.3rem;
         margin-top: 0;
     }
 
@@ -558,7 +571,7 @@ footer {
         font-weight: 500;
     }
     .hero-text {
-        font-size: 1.5rem;
+        font-size: 1.4rem;
     }
    
 }
@@ -619,6 +632,10 @@ footer {
     .contact-form {
         padding: 2rem;
     }
+
+    .contact-text {
+    font-size: 1.5rem;
+}
    
 }
 
@@ -733,6 +750,10 @@ footer {
         object-fit: cover;
         position: relative;
         z-index: 2;
+    }
+
+    .contact-text {
+    font-size: 1.7rem;
     }
 }    
 
