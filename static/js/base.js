@@ -21,6 +21,7 @@ function toggleTheme() {
 // Load theme immediately when script runs
 loadTheme();
 
+
 // Add event listeners
 document.addEventListener('DOMContentLoaded', function() {
     const mainBtn = document.getElementById("btnSwitch-main");
