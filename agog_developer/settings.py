@@ -33,7 +33,7 @@ SECRET_KEY = os.environ.get('SECRET_KEY')
 # SECURITY WARNING: don't run with debug turned on in production!
 # DEBUG = 'DEVELOPMENT' in os.environ
 
-DEBUG = False
+DEBUG = True
 
 # SEND EMAIL SETTINGS
 EMAIL_HOST = 'smtp.gmail.com'
@@ -200,14 +200,28 @@ STATIC_URL = '/static/'
 
 if not DEBUG:
     STATIC_ROOT = os.path.join(BASE_DIR, 'staticfiles')
+    
     STORAGES = {
         "default": {
+            # Use Cloudinary for media files (user uploads)
             "BACKEND": "cloudinary_storage.storage.MediaCloudinaryStorage",
-            },
+        },
         "staticfiles": {
+            # Whitenoise for static files (CSS, JS, etc.)
             "BACKEND": "whitenoise.storage.CompressedManifestStaticFilesStorage",
-    },
-}
+        },
+    }
+    
+else:
+    # Development settings
+    STORAGES = {
+        "default": {
+            "BACKEND": "django.core.files.storage.FileSystemStorage",
+        },
+        "staticfiles": {
+            "BACKEND": "django.contrib.staticfiles.storage.StaticFilesStorage",
+        },
+    }
 
 STATICFILES_DIRS = [os.path.join(BASE_DIR, 'static'),]
 
