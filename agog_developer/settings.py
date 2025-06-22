@@ -203,22 +203,11 @@ STATICFILES_DIRS = [os.path.join(BASE_DIR, 'static'),]
 if not DEBUG:
     STATIC_ROOT = os.path.join(BASE_DIR, 'staticfiles')
 
-    WHITENOISE_MANIFEST_STRICT = False
-    
-    STORAGES = {
-        "default": {
-            # Use Cloudinary for media files (user uploads)
-            "BACKEND": 'cloudinary_storage.storage.StaticHashedCloudinaryStorage',
-        },
-        "staticfiles": {
-            # Whitenoise for static files (CSS, JS, etc.)
-            "BACKEND": "whitenoise.storage.CompressedManifestStaticFilesStorage"
-        },
-    }
+    STATICFILES_STORAGE = 'whitenoise.storage.CompressedManifestStaticFilesStorage'
 
     
 # MEDIA_URL = '/media/'
-# DEFAULT_FILE_STORAGE = 'cloudinary_storage.storage.MediaCloudinaryStorage'
+DEFAULT_FILE_STORAGE = 'cloudinary_storage.storage.MediaCloudinaryStorage'
 
 
 CLOUDINARY_STORAGE = {
