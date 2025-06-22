@@ -196,18 +196,18 @@ USE_TZ = True
 
 STATIC_URL = '/static/'
 
+STATICFILES_DIRS = [os.path.join(BASE_DIR, 'static'),]
+
 # For production - where collected static files will be stored
 
 if not DEBUG:
     STATIC_ROOT = os.path.join(BASE_DIR, 'staticfiles')
-   
-    STATICFILES_STORAGE = 'whitenoise.storage.CompressedStaticFilesStorage'
+
+    STATICFILES_STORAGE = 'whitenoise.storage.CompressedManifestStaticFilesStorage'
     WHITENOISE_MANIFEST_STRICT = False
     
-    
-STATICFILES_DIRS = [os.path.join(BASE_DIR, 'static'),]
 
-MEDIA_URL = '/media/'
+# MEDIA_URL = '/media/'
 DEFAULT_FILE_STORAGE = 'cloudinary_storage.storage.MediaCloudinaryStorage'
 
 
