@@ -217,7 +217,6 @@ if not DEBUG:
     }
 
     
-
 # MEDIA_URL = '/media/'
 # DEFAULT_FILE_STORAGE = 'cloudinary_storage.storage.MediaCloudinaryStorage'
 
