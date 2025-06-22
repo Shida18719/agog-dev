@@ -200,12 +200,12 @@ STATIC_URL = '/static/'
 
 if not DEBUG:
     STATIC_ROOT = os.path.join(BASE_DIR, 'staticfiles')
-    # STATICFILES_STORAGE = 'whitenoise.storage.CompressedManifestStaticFilesStorage'
+    STATICFILES_STORAGE = 'whitenoise.storage.CompressedManifestStaticFilesStorage'
     
     STORAGES = {
         "default": {
             # Use Cloudinary for media files (user uploads)
-            "BACKEND": 'cloudinary_storage.storage.StaticHashedCloudinaryStorage'
+            "BACKEND": 'cloudinary_storage.storage.StaticHashedCloudinaryStorage',
         },
         "staticfiles": {
             # Whitenoise for static files (CSS, JS, etc.)
