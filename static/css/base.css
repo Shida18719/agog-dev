@@ -592,22 +592,23 @@ footer {
     position: relative;
     z-index: 2;
     
-}
+    }
 
-.contact-image-bg {
-    background: url(https://res.cloudinary.com/dep46gq6m/image/upload/v1750094839/abstract_md_c16sid.jpg);
-    min-height: 100vh;
-    background-size: cover;
-    background-position: center;
-    background-repeat: no-repeat;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    width: 100%;
-    object-fit: cover;
-    position: relative;
-    z-index: 2;
-}
+    .contact-image-bg {
+        background: url(https://res.cloudinary.com/dep46gq6m/image/upload/v1750094839/abstract_md_c16sid.jpg);
+        min-height: 100vh;
+        background-size: cover;
+        background-position: center;
+        background-repeat: no-repeat;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        width: 100%;
+        object-fit: cover;
+        position: relative;
+        z-index: 2;
+    }
+
     h1 {
         font-size: 3rem;  
     }
@@ -635,7 +636,7 @@ footer {
 
     .contact-text {
     font-size: 1.5rem;
-}
+    }
    
 }
 
