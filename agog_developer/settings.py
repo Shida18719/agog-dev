@@ -205,7 +205,7 @@ if not DEBUG:
     STORAGES = {
         "default": {
             # Use Cloudinary for media files (user uploads)
-            "BACKEND": "cloudinary_storage.storage.MediaCloudinaryStorage",
+            "BACKEND": 'cloudinary_storage.storage.StaticHashedCloudinaryStorage'
         },
         "staticfiles": {
             # Whitenoise for static files (CSS, JS, etc.)
